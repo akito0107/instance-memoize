@@ -6,11 +6,16 @@
   "scripts": {
     "lint": "eslint ./src/**/*.js",
     "lint:fix": "eslint --fix ./src/**/*.js",
-    "build": "rollup --config"
+    "build": "rollup --config",
+    "test": "jest"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-power-assert": "^2.0.0",
     "eslint": "^4.18.2",
     "eslint-config-prettier": "^2.9.0",
+    "jest": "^22.4.2",
+    "power-assert": "^1.4.4",
     "prettier-eslint": "^8.8.1",
     "rollup": "^0.56.3"
   }
