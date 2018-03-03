@@ -1,12 +1,18 @@
 {
   "env": {
-    "browser": true,
+    "node": true,
     "es6": true
   },
   "extends": [
     "prettier"
   ],
+  "plugins": [
+    "prettier"
+  ],
   "parserOptions": {
     "sourceType": "module"
+  },
+  "rules": {
+    "prettier/prettier": "error"
   }
 }
