@@ -17,11 +17,9 @@ export default ({ instance, methods = [], options = {} }) => {
       instance["_cache"] = cache;
     }
     if (!instance.hasOwnProperty("_purge")) {
-      Object.defineProperty(instance, "_purge", {
-        value: () => {
-          instance["_cache"].reset();
-        }
-      });
+      instance["_purge"] = () => {
+        instance["_cache"].reset();
+      };
     }
   });
   return instance;
