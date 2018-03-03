@@ -1,8 +1,13 @@
 {
   "name": "instance-memoize",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.1.0",
+  "main": "build/bundle.js",
   "license": "MIT",
+  "repository": "akito0107/instane-memoize",
+  "author": {
+    "name": "Akito Ito",
+    "email": "akito0107@gmail.com"
+  },
   "scripts": {
     "lint": "eslint ./src/**/*.js",
     "lint:fix": "eslint --fix ./src/**/*.js",
