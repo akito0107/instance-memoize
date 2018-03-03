@@ -1,9 +1,10 @@
 export default {
-  input: 'src/main.js',
+  input: "src/main.js",
   output: [
     {
-      file: 'build/bundle.js',
-      format: 'cjs'
+      file: "build/bundle.js",
+      format: "cjs"
     }
-  ]
-}
+  ],
+  external: ["object-hash"]
+};

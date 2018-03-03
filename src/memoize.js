@@ -1,5 +1,6 @@
 import cacheable from "./cacheable";
 import Cache from "./cache";
+import hash from "object-hash";
 
 export default ({ instance, methods = [], options = {} }) => {
   const cache = options.cache || new Cache();
@@ -25,6 +26,6 @@ export default ({ instance, methods = [], options = {} }) => {
   return instance;
 };
 
-const defaultKeygen = (methodName, ...args) => {
-  return methodName + args.join("");
+export const defaultKeygen = (methodName, ...args) => {
+  return hash([methodName, ...args]);
 };

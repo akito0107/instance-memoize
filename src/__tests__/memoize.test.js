@@ -1,7 +1,7 @@
 "use strict";
 
 import assert from "assert";
-import memoize from "../memoize";
+import memoize, { defaultKeygen } from "../memoize";
 
 test("called once with same arguments", () => {
   let cnt = 0;
