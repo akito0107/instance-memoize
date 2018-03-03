@@ -1,5 +1,6 @@
 export default (cache, keygen) => fn => (...args) => {
-  const key = keygen(...args);
+  const orgMethodName = fn.name.slice(6); // remove "bound "
+  const key = keygen(orgMethodName, ...args);
   const exists = cache.get(key);
   if (exists) {
     return exists;

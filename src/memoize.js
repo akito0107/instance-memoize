@@ -1,5 +1,5 @@
 import cacheable from "./cacheable";
-import Cache from "./Cache";
+import Cache from "./cache";
 
 export default ({ instance, methods = [], options = {} }) => {
   const cache = options.cache || new Cache();
@@ -13,16 +13,10 @@ export default ({ instance, methods = [], options = {} }) => {
         return fn(...args);
       }
     });
-    if (!instance.hasOwnProperty("_cacheList")) {
-      Object.defineProperty(instance, "_cacheList", {
-        value: {}
-      });
-    }
-    instance._cacheList[m] = cache;
     if (!instance.hasOwnProperty("_purge")) {
       Object.defineProperty(instance, "_purge", {
-        value: method => {
-          instance._cacheList[method].reset();
+        value: () => {
+          instance["__$cache$__"].reset();
         }
       });
     }
@@ -30,6 +24,6 @@ export default ({ instance, methods = [], options = {} }) => {
   return instance;
 };
 
-function defaultKeygen(...args) {
-  return args.join("");
-}
+const defaultKeygen = (methodName, ...args) => {
+  return methodName + args.join("");
+};
