@@ -2,7 +2,7 @@
   "name": "instance-memoize",
   "version": "0.1.0",
   "main": "build/bundle.js",
-  "license": "MIT",
+  "license": "apache-2.0",
   "repository": "akito0107/instane-memoize",
   "author": {
     "name": "Akito Ito",
