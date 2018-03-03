@@ -6,6 +6,7 @@ export default (cache, keygen) => fn => (...args) => {
     return exists;
   }
   const res = fn(...args);
+
   cache.set(key, res);
   return res;
 };

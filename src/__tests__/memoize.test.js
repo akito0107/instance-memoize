@@ -203,3 +203,33 @@ test("purge cache with multiple function", () => {
   assert.strictEqual(cnt1, 2);
   assert.strictEqual(cnt2, 2);
 });
+
+test("with Promise", async () => {
+  let cnt = 0;
+  const obj = {
+    method: () => {
+      return Promise.resolve().then(() => {
+        cnt++;
+        return Promise.resolve("test");
+      });
+    }
+  };
+  const wrapped = memoize({ instance: obj, methods: ["method"] });
+  assert.strictEqual(await wrapped.method(), await wrapped.method());
+  assert.strictEqual(await wrapped.method(), "test");
+  assert.strictEqual(cnt, 1);
+});
+
+test("with async function", async () => {
+  let cnt = 0;
+  const obj = {
+    method: async () => {
+      cnt++;
+      return "test";
+    }
+  };
+  const wrapped = memoize({ instance: obj, methods: ["method"] });
+  assert.strictEqual(await wrapped.method(), await wrapped.method());
+  assert.strictEqual(await wrapped.method(), "test");
+  assert.strictEqual(cnt, 1);
+});
