@@ -13,10 +13,13 @@ export default ({ instance, methods = [], options = {} }) => {
         return fn(...args);
       }
     });
+    if (!instance.hasOwnProperty("_cache")) {
+      instance["_cache"] = cache;
+    }
     if (!instance.hasOwnProperty("_purge")) {
       Object.defineProperty(instance, "_purge", {
         value: () => {
-          instance["__$cache$__"].reset();
+          instance["_cache"].reset();
         }
       });
     }

@@ -201,5 +201,5 @@ test("purge cache with multiple function", () => {
   wrapped.method1("test1");
   wrapped.method2("test2");
   assert.strictEqual(cnt1, 2);
-  assert.strictEqual(cnt2, 1);
+  assert.strictEqual(cnt2, 2);
 });
