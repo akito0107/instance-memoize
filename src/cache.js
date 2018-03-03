@@ -1,18 +1,13 @@
 export default class Cache {
   constructor(opts = {}) {
     this.body = {}
-    this.keygen = opts.keygen || defaultKeygen
   }
-  get(...keys) {
-    return this.body[this.keygen(...keys)]
+  get(key) {
+    return this.body[key]
   }
-  set(res, ...keys) {
-    const exists = this.get(...keys)
-    this.body[this.keygen(...keys)] = res
+  set(key, obj) {
+    const exists = this.get(key)
+    this.body[key] = obj
     return exists
   }
-}
-
-function defaultKeygen (...args) {
-  return args.join("")
 }

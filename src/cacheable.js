@@ -1,14 +1,12 @@
-import Cache from "./cache";
-
-export default (fn) => {
-  const cache = new Cache()
+export default (cache, keygen) => (fn) => {
   return (...args) => {
-    const exists = cache.get(...args)
+    const key =  keygen(...args)
+    const exists = cache.get(key)
     if(exists) {
       return exists
     }
     const res = fn(...args)
-    cache.set(res, ...args)
+    cache.set(key, res)
     return res
   }
 }
