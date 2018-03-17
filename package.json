@@ -12,14 +12,22 @@
     "lint": "eslint ./src/**/*.js",
     "lint:fix": "eslint --fix ./src/**/*.js",
     "build": "rollup --config",
-    "test": "jest"
+    "test": "jest",
+    "install:type": "flow-typed install --overwrite"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "^23.0.0-alpha.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-power-assert": "^2.0.0",
     "eslint": "^4.18.2",
     "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-jest": "^21.15.0",
     "eslint-plugin-prettier": "^2.6.0",
+    "flow-bin": "^0.68.0",
+    "flow-typed": "^2.4.0",
     "jest": "^22.4.2",
     "object-hash": "^1.2.0",
     "power-assert": "^1.4.4",

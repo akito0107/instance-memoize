@@ -4,10 +4,14 @@
     "es6": true
   },
   "extends": [
-    "prettier"
+    "plugin:flowtype/recommended",
+    "prettier",
+    "prettier/flowtype"
   ],
   "plugins": [
-    "prettier"
+    "jest",
+    "prettier",
+    "flowtype"
   ],
   "parserOptions": {
     "sourceType": "module",

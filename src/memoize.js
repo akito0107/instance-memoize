@@ -1,8 +1,17 @@
+// @flow
+
 import cacheable from "./cacheable";
 import Cache from "./cache";
 import hash from "object-hash";
+import type { keygenFunc } from "./cacheable";
 
-export default ({ instance, methods = [], options = {} }) => {
+type Opts = {
+  instance: any,
+  methods: string[],
+  options: ?any
+};
+
+export default ({ instance, methods = [], options = {} }: Opts) => {
   const cache = options.cache || new Cache();
   const keygenFn = options.keygen || defaultKeygen;
   const wrap = cacheable(cache, keygenFn);
@@ -26,6 +35,9 @@ export default ({ instance, methods = [], options = {} }) => {
   return instance;
 };
 
-export const defaultKeygen = (methodName, ...args) => {
+export const defaultKeygen: keygenFunc = (
+  methodName: string,
+  ...args: [any]
+) => {
   return hash([methodName, ...args]);
 };

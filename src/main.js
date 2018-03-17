@@ -1,3 +1,3 @@
-import memoize from "./memoize";
+// @flow
 
-export default memoize;
+export { default as memoize } from "./memoize";
