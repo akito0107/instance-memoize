@@ -13,6 +13,7 @@
     "lint:fix": "eslint --fix ./src/**/*.js",
     "build": "rollup --config",
     "test": "jest",
+    "test:cover": "jest --coverage",
     "install:type": "flow-typed install --overwrite"
   },
   "devDependencies": {

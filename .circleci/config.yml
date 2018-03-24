@@ -1,0 +1,32 @@
+version: 2
+jobs:
+  build:
+    environment:
+      - CC_TEST_REPORTER_ID: 6fcf7939554e3b3f3c7a2431471720218bd8c136930013105c5ad4f3e0ced2fc
+    docker:
+      - image: circleci/node:8.9.4
+    working_directory: ~/node
+    steps:
+      - checkout
+      - restore_cache:
+          key: v1-dependencies-{{ checksum "package.json"}}
+      - run:
+          name: Run npm install
+          command: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Run npm install:type
+          command: yarn install:type
+      - run:
+          name: Run lint
+          command: yarn lint
+      - run:
+          name: Flow
+          command: yarn flow
+      - run:
+          name: Run unit tests
+          command: |
+            yarn test:cover
