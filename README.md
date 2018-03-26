@@ -1,5 +1,8 @@
 # instance-memoize
 
+[![npm version](https://badge.fury.io/js/instance-memoize.svg)](https://badge.fury.io/js/instance-memoize)
+[![CircleCI](https://circleci.com/gh/akito0107/instance-memoize.svg?style=svg)](https://circleci.com/gh/akito0107/instance-memoize)
+
 flexible cache wrapper for js object.
 
 ## Getting Started
