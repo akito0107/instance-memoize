@@ -2,6 +2,8 @@
 
 [![npm version](https://badge.fury.io/js/instance-memoize.svg)](https://badge.fury.io/js/instance-memoize)
 [![CircleCI](https://circleci.com/gh/akito0107/instance-memoize.svg?style=svg)](https://circleci.com/gh/akito0107/instance-memoize)
+[![Maintainability](https://api.codeclimate.com/v1/badges/93020a6dd00c043f4593/maintainability)](https://codeclimate.com/github/akito0107/instance-memoize/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/93020a6dd00c043f4593/test_coverage)](https://codeclimate.com/github/akito0107/instance-memoize/test_coverage)
 
 flexible cache wrapper for js object.
 
