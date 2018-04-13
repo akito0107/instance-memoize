@@ -1,5 +1,7 @@
 # instance-memoize
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/akito0107/instance-memoize.svg)](https://greenkeeper.io/)
+
 [![npm version](https://badge.fury.io/js/instance-memoize.svg)](https://badge.fury.io/js/instance-memoize)
 [![CircleCI](https://circleci.com/gh/akito0107/instance-memoize.svg?style=svg)](https://circleci.com/gh/akito0107/instance-memoize)
 [![Maintainability](https://api.codeclimate.com/v1/badges/93020a6dd00c043f4593/maintainability)](https://codeclimate.com/github/akito0107/instance-memoize/maintainability)
