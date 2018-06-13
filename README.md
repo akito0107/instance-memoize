@@ -28,7 +28,7 @@ $ npm add instance-memoize
 If you want to manage cache purging and lifetime see [custom cache example](#with custom cache).
 
 ```js
-import memoize from 'instane-memoize'; // or const memoize = require('instance-memoize') for commonjs modules
+import memoize from 'instance-memoize'; // or const memoize = require('instance-memoize') for commonjs modules
 
 const obj = {
   calledCounter: 0,
