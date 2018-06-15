@@ -28,7 +28,7 @@ $ npm add instance-memoize
 If you want to manage cache purging and lifetime see [custom cache example](#with custom cache).
 
 ```js
-import memoize from 'instane-memoize'; // or const memoize = require('instance-memoize') for commonjs modules
+import memoize from 'instance-memoize'; // or const memoize = require('instance-memoize') for commonjs modules
 
 const obj = {
   calledCounter: 0,
@@ -56,7 +56,7 @@ console.log(wrapped.calledCounter) // output => "1"
 
 ### with es2015 classes
 ```js
-import memoize from 'instane-memoize'; // or const memoize = require('instance-memoize') for commonjs modules
+import memoize from 'instance-memoize'; // or const memoize = require('instance-memoize') for commonjs modules
 
 class Sample {
   constructor() {
@@ -84,7 +84,7 @@ console.log(wrapped.calledCounter)     // output => "1"
 `instance-memoize` also works with async/await or Promise. 
 
 ```js
-import memoize from 'instane-memoize'; // or const memoize = require('instance-memoize') for commonjs modules
+import memoize from 'instance-memoize'; // or const memoize = require('instance-memoize') for commonjs modules
 
 class Sample {
   constructor() {
@@ -117,7 +117,7 @@ You can use your customized cache by passing cache instance via options.
 
 This example shows `instance-memoize` working with [isaacs's node-lru-cache](https://github.com/isaacs/node-lru-cache).
 ```js
-import memoize from 'instane-memoize'; // or const memoize = require('instance-memoize') for commonjs modules
+import memoize from 'instance-memoize'; // or const memoize = require('instance-memoize') for commonjs modules
 import LRU from 'lru-cache' // import isaacs's node-lru-cache
 
 class Sample {
