@@ -4,7 +4,7 @@ jobs:
     environment:
       - CC_TEST_REPORTER_ID: adc50901d32e22f17cf9c06f1afb1fb6ef44462c43e0cf8a7d315dfae622d51b
     docker:
-      - image: circleci/node:8.9.4
+      - image: circleci/node:10.5.0
     working_directory: ~/node
     steps:
       - checkout
