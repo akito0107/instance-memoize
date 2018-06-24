@@ -1,4 +1,4 @@
-"use strict";
+// @flow
 
 import assert from "assert";
 import memoize, { defaultKeygen } from "../memoize";
@@ -176,6 +176,7 @@ test("purge cache", () => {
   };
   const wrapped = memoize({ instance: obj, methods: ["method"] });
   wrapped.method("test1");
+  // $FlowFixMe
   obj._purge("method");
   wrapped.method("test1");
   assert.strictEqual(cnt, 2);
@@ -197,6 +198,7 @@ test("purge cache with multiple function", () => {
   const wrapped = memoize({ instance: obj, methods: ["method1", "method2"] });
   wrapped.method1("test1");
   wrapped.method2("test2");
+  // $FlowFixMe
   obj._purge("method1");
   wrapped.method1("test1");
   wrapped.method2("test2");

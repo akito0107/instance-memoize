@@ -1,3 +1,24 @@
 {
-  "presets": ["env", "power-assert", "flow"]
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ],
+    "power-assert",
+    "flow"
+  ],
+  "plugins": [
+    "transform-class-properties"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        "env",
+        "power-assert",
+        "flow"
+      ]
+    }
+  }
 }

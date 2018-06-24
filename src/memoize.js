@@ -8,7 +8,7 @@ import type { keygenFunc } from "./cacheable";
 type Opts = {
   instance: any,
   methods: string[],
-  options: ?any
+  options?: any
 };
 
 export default ({ instance, methods = [], options = {} }: Opts) => {
