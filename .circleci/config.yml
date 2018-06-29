@@ -44,6 +44,7 @@ jobs:
             yarn test:cover
             ./tmp/cc-test-reporter format-coverage -t lcov -o tmp/codeclimate.json coverage/lcov.info
       - run: greenkeeper-lockfile-upload
+      - run: yarn build
       - run:
           name: Upload coverage results to Code Climate
           command: |
