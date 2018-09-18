@@ -10,7 +10,7 @@
     "@babel/preset-flow"
   ],
   "plugins": [
-    "@babel/transform-class-properties"
+    "@babel/plugin-proposal-class-properties"
   ],
   "env": {
     "test": {
