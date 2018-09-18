@@ -11,7 +11,7 @@ export default {
   plugins: [
     babel({
       exclude: "node_modules/**",
-      plugins: ["external-helpers"]
+      plugins: ["@babel/plugin-external-helpers"]
     })
   ],
   external: ["object-hash"]
