@@ -16,6 +16,10 @@ export default (cache: ICache, keygen: keygenFunc) => (fn: memoFunc) => (
   }
   const res = fn(...args);
 
+
+
+
+
   cache.set(key, res);
   return res;
 };
