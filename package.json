@@ -31,7 +31,7 @@
     "eslint-plugin-flowtype": "^3.0.0",
     "eslint-plugin-jest": "^22.0.0",
     "eslint-plugin-prettier": "^3.0.0",
-    "flow-bin": "^0.102.0",
+    "flow-bin": "^0.105.1",
     "flow-typed": "^2.4.0",
     "jest": "^22.4.2",
     "power-assert": "^1.4.4",
